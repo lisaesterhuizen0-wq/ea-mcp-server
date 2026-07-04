@@ -12,6 +12,7 @@ The server exposes two tools. Claude decides when to call them based on what you
 |------|--------------|
 | `time_in` | The current local time in any IANA timezone. |
 | `working_hours_overlap` | Given two or more timezones, the hours today when everyone's working day overlaps. The answer to "when can we all meet?" |
+| `draft_calendar_hold` | Turn a meeting into a ready-to-save `.ics` invite, with the local start time converted to a correct UTC instant. |
 
 ### Example
 
@@ -62,7 +63,7 @@ TypeScript, the official `@modelcontextprotocol/sdk`, zod for input validation, 
 
 ## Roadmap
 
-More tools an assistant actually reaches for: next free slot, draft a calendar hold, a quick meeting brief.
+More tools an assistant actually reaches for: a next-free-slot finder and a quick meeting brief.
 
 ---
 
