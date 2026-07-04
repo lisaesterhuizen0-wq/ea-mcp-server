@@ -2,16 +2,25 @@
   "name": "ea-mcp-server",
   "version": "0.1.0",
   "description": "An MCP server of small executive-assistant superpowers for Claude",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "assistant",
+    "timezone",
+    "scheduling",
+    "ics"
+  ],
+  "author": "Lisa Myburgh",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
@@ -21,5 +30,22 @@
     "@types/node": "^26.1.0",
     "tsx": "^4.23.0",
     "typescript": "^6.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisaesterhuizen0-wq/ea-mcp-server.git"
+  },
+  "homepage": "https://github.com/lisaesterhuizen0-wq/ea-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/lisaesterhuizen0-wq/ea-mcp-server/issues"
+  },
+  "bin": {
+    "ea-mcp-server": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ]
 }
